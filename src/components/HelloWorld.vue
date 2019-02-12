@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <vm-button>sadfads</vm-button>
+    <!-- <vm-button>sadfads</vm-button> -->
     <vm-checkbox>sdfa</vm-checkbox>
     <h1>{{ msg }}</h1>
     <p>
