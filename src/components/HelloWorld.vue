@@ -1,7 +1,20 @@
 <template>
   <div class="hello">
-    <!-- <vm-button>sadfads</vm-button> -->
+    <vm-button
+      loading
+      primary
+      raised
+      icon="add"
+      @click="onClick"
+    >Button</vm-button>
+    <vm-button
+      primary
+      raised
+      icon="add"
+      @click="onClick"
+    >Button</vm-button>
     <vm-checkbox>sdfa</vm-checkbox>
+    <vm-icon>add</vm-icon>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -17,6 +30,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  onClick() {
+    console.log('click');
+  }
 }
 </script>
 
