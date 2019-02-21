@@ -9,10 +9,7 @@ import 'vue-mapp-test/dist/mainComponents.css';
 
 Vue.config.productionTip = false;
 
-// Vue.use(VueMapp);
 Vue.use(VueMappTest);
-console.log(VueMappTest);
-// Vue.component('vm-button-test', VueMappButton);
 
 new Vue({
   router,

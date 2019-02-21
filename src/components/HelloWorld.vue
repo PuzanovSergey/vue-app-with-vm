@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <vm-button
+    <!-- <vm-button
       loading
       primary
       raised
@@ -11,16 +11,55 @@
       primary
       raised
       icon="add"
-      @click="onClick"
-    >Button</vm-button>
+      @click="onClick(true)"
+    >Show modal</vm-button>
     <vm-checkbox>sdfa</vm-checkbox>
     <vm-icon>add</vm-icon>
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
+    <vm-input
+      label="label"
+      description="description"
+      placeholder="placeholder"
+    ></vm-input>
+
+    <vm-divider style="margin-bottom: 16px" />
+    <vm-card title="Карта">
+      <div>sdfasdf</div>
+    </vm-card>
+
+    <vm-modal v-if="showModal">
+      <button @click="onClick(false)">Close</button>
+    </vm-modal>
+
+    <vm-menu
+      close-on-click
+    >
+      <button
+        slot="trigger"
+      >Меню</button>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </vm-menu> -->
+
+    <!-- <vm-list>
+      <vm-list-item>asfasf</vm-list-item>
+    </vm-list> -->
+
+    <!-- <vm-switch>sdf</vm-switch> -->
+    <!-- <vm-textarea
+      rows="2"
+      placeholder="placeholder"
+    ></vm-textarea> -->
+    <vm-card>
+      <div>div 1</div>
+      <vm-button primary raised>Button 1</vm-button>
+      <div>div 2</div>
+      <vm-divider></vm-divider>
+      <vm-input placeholder="afd"></vm-input>
+      <vm-icon>add</vm-icon>
+      <vm-input>sdfas</vm-input>
+    </vm-card>
+    <vm-button>Button 2</vm-button>
   </div>
 </template>
 
@@ -31,14 +70,21 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 
-  onClick() {
-    console.log('click');
+  showModal: boolean = false;
+
+  onClick(value) {
+    this.showModal = value;
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+// .hello {
+//   display: flex;
+//   flex-direction: column;
+// }
+
 h3 {
   margin: 40px 0 0;
 }
